@@ -43,6 +43,9 @@ namespace Lab02_ConsoleCoreLog
             logger.Info("Hello {0}", "Peter");
             //#結構式日誌
             logger.Info("Hello {user}", "Peter");
+            logger.Info("Hello {@user}", "Peter");
+            logger.Info("Hello {$user}", "Peter");
+
             logger.Info("Hello {user}", new { Name = "Peter", Age = 18 });
             logger.Info("Hello {@user}", new { Name = "Mandy", Age = 16 }); //#Json
             logger.Info("Hello {$user}", new { Name = "Dash", Age = 10 }); //#ToString

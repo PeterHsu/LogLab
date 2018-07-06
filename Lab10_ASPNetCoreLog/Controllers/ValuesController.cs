@@ -12,6 +12,7 @@ namespace Lab10_ASPNetCoreLog.Controllers
     public class ValuesController : ControllerBase
     {
         private readonly ILogger<ValuesController> _logger;
+        
         public ValuesController(ILogger<ValuesController> logger)
         {
             this._logger = logger;
@@ -21,6 +22,7 @@ namespace Lab10_ASPNetCoreLog.Controllers
         public ActionResult<IEnumerable<string>> Get()
         {
             _logger.LogInformation("呼叫Get()");
+            _logger.LogError(new Exception("發生錯誤"), "錯誤測試");
             return new string[] { "value1", "value2" };
         }
 
